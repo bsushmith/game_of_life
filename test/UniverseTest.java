@@ -5,7 +5,7 @@ import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
-public class SpaceTimeTest {
+public class UniverseTest {
 
     @Test
     public void tick_expectsBlockPattern_whenGivenBlockPattern() {
@@ -18,7 +18,7 @@ public class SpaceTimeTest {
         cells.add(cell2);
         cells.add(cell3);
         cells.add(cell4);
-        SpaceTime spaceTime = SpaceTime.create(cells);
+        Universe universe = Universe.create(cells);
 
         Cell expectedCell1 = new Cell(new Location(1, 1), CellState.ALIVE);
         Cell expectedCell2 = new Cell(new Location(1, 2), CellState.ALIVE);
@@ -29,11 +29,11 @@ public class SpaceTimeTest {
         expectedCells.add(expectedCell2);
         expectedCells.add(expectedCell3);
         expectedCells.add(expectedCell4);
-        SpaceTime expectedSpaceTime = SpaceTime.create(expectedCells);
+        Universe expectedUniverse = Universe.create(expectedCells);
 
-        spaceTime.tick();
+        universe.tick();
 
-        assertEquals(expectedSpaceTime, spaceTime);
+        assertEquals(expectedUniverse, universe);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class SpaceTimeTest {
         cells.add(cell3);
         cells.add(cell4);
         cells.add(cell5);
-        SpaceTime spaceTime = SpaceTime.create(cells);
+        Universe universe = Universe.create(cells);
 
         Cell expectedCell1 = new Cell(new Location(0, 1), CellState.ALIVE);
         Cell expectedCell2 = new Cell(new Location(1, 0), CellState.ALIVE);
@@ -62,11 +62,11 @@ public class SpaceTimeTest {
         expectedCells.add(expectedCell3);
         expectedCells.add(expectedCell4);
         expectedCells.add(expectedCell5);
-        SpaceTime expectedSpaceTime = SpaceTime.create(expectedCells);
+        Universe expectedUniverse = Universe.create(expectedCells);
 
-        spaceTime.tick();
+        universe.tick();
 
-        assertEquals(expectedSpaceTime, spaceTime);
+        assertEquals(expectedUniverse, universe);
     }
 
     @Test
@@ -78,7 +78,7 @@ public class SpaceTimeTest {
         cells.add(cell1);
         cells.add(cell2);
         cells.add(cell3);
-        SpaceTime spaceTime = SpaceTime.create(cells);
+        Universe universe = Universe.create(cells);
 
         Cell expectedCell1 = new Cell(new Location(1, 1), CellState.ALIVE);
         Cell expectedCell2 = new Cell(new Location(0, 1), CellState.ALIVE);
@@ -87,11 +87,11 @@ public class SpaceTimeTest {
         expectedCells.add(expectedCell1);
         expectedCells.add(expectedCell2);
         expectedCells.add(expectedCell3);
-        SpaceTime expectedSpaceTime = SpaceTime.create(expectedCells);
+        Universe expectedUniverse = Universe.create(expectedCells);
 
-        spaceTime.tick();
+        universe.tick();
 
-        assertEquals(expectedSpaceTime, spaceTime);
+        assertEquals(expectedUniverse, universe);
     }
 
     @Test
@@ -109,7 +109,7 @@ public class SpaceTimeTest {
         cells.add(cell4);
         cells.add(cell5);
         cells.add(cell6);
-        SpaceTime spaceTime = SpaceTime.create(cells);
+        Universe universe = Universe.create(cells);
 
         Cell expectedCell1 = new Cell(new Location(0, 2), CellState.ALIVE);
         Cell expectedCell2 = new Cell(new Location(1, 1), CellState.ALIVE);
@@ -124,11 +124,11 @@ public class SpaceTimeTest {
         expectedCells.add(expectedCell4);
         expectedCells.add(expectedCell5);
         expectedCells.add(expectedCell6);
-        SpaceTime expectedSpaceTime = SpaceTime.create(expectedCells);
+        Universe expectedUniverse = Universe.create(expectedCells);
 
-        spaceTime.tick();
+        universe.tick();
 
-        assertEquals(expectedSpaceTime, spaceTime);
+        assertEquals(expectedUniverse, universe);
 
     }
 

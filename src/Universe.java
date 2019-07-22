@@ -1,18 +1,18 @@
 import java.util.Arrays;
 import java.util.Set;
 
-public class SpaceTime {
+public class Universe {
 
     private static final int GRID_LENGTH = 8;
     private static final int GRID_BREADTH = 8;
 
     private Cell[][] grid;
 
-    private SpaceTime(Cell[][] grid) {
+    private Universe(Cell[][] grid) {
         this.grid = grid;
     }
 
-    public static SpaceTime create(Set<Cell> cells) {
+    public static Universe create(Set<Cell> cells) {
         Cell[][] grid = new Cell[GRID_LENGTH][GRID_BREADTH];
 
         for (Cell cell : cells) {
@@ -28,7 +28,7 @@ public class SpaceTime {
                 }
             }
         }
-        return new SpaceTime(grid);
+        return new Universe(grid);
     }
 
     public void tick() {
@@ -76,8 +76,8 @@ public class SpaceTime {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        SpaceTime spaceTime = (SpaceTime) o;
-        return Arrays.deepEquals(grid, spaceTime.grid);
+        Universe universe = (Universe) o;
+        return Arrays.deepEquals(grid, universe.grid);
     }
 
     @Override

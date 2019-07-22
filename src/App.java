@@ -17,10 +17,10 @@ public class App {
             Cell cell = new Cell(new Location(x, y), CellState.ALIVE);
             cells.add(cell);
         }
-        SpaceTime spaceTime = SpaceTime.create(cells);
-        System.out.println("Current Generation: " + "\n" + spaceTime.toString());
+        Universe universe = Universe.create(cells);
+        System.out.println("Current Generation: " + "\n" + universe.toString());
 
-        spaceTime.tick();
-        System.out.println("Future Generation: " + "\n" + spaceTime.toString());
+        universe.tick();
+        System.out.println("Future Generation: " + "\n" + universe.toString());
     }
 }
